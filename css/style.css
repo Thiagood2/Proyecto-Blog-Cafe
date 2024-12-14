@@ -1,0 +1,283 @@
+:root {
+    --fuente_headings: "PT Sans", sans-serif;
+    --fuente_parrafos: 'Open Sans', sans-serif;
+    --color_blanco: #FFF;
+    --color_negro: #000;
+    --color_gris:#e1e1e1;
+    --color_primario: #784d3c;
+}
+
+
+/* General */
+
+html {
+    font-size:62.5%;
+    box-sizing: border-box;
+}
+
+*,*:before, *:after {
+    box-sizing: inherit;
+}
+
+body {
+    font-family: var(--fuente_parrafos);
+    font-size: 1.6rem;
+    line-height: 2;
+}
+
+/* Globales */
+
+.contenedor {
+    margin:0 auto;
+    max-width: 120rem;
+    width:  90%;
+}
+.boton {
+    display:block;
+    text-transform: uppercase;
+    color:var(--color_blanco);
+    font-family: var(--fuente_headings);
+    text-align: center;
+    font-weight: bold;
+    padding: 1rem 3rem;
+    font-size: 1.8rem;
+    border:none;
+    cursor:pointer;
+}
+@media screen and (min-width:768px) {
+    .boton{ 
+        display:inline-block;
+    };
+}
+a {
+    text-decoration: none;
+}
+
+h1, h2, h3, h4 {
+    font-family: var(--fuente_headings);
+    line-height: 1.2;
+}
+
+h1 {
+    font-size: 4.8rem;
+}
+
+h2 {
+    font-size: 4rem;
+}
+
+h3 {
+    font-size: 3.2rem;
+}
+
+h4 {
+    font-size: 2.8rem;
+}
+
+img {
+    max-width: 100%;
+}
+
+/* Utilidades */
+
+.no_margin {
+    margin: 0;
+}
+
+.no_padding {
+    padding: 0;
+}
+
+.centrar_texto {
+    text-align: center;
+}
+
+/* Header */
+
+.header {
+    background-image: url(../img/banner.jpg);
+    height: 60rem;
+    background-size: cover;  /* Para que tome todo el espacio disponible */
+    background-repeat: no-repeat;
+
+    background-position: center center;  /* Centrado (horizontal (izq derc), vert()*/
+}
+
+
+.header__texto {
+    color:var(--color_blanco);
+    text-align: center;
+    margin-top: 5rem;
+}
+
+.barra {
+    padding-top: 4rem;
+}
+.navegacion {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+@media screen and (min-width:768px) {
+    .header__texto {
+        margin-top:15rem;
+    }
+    .barra {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    .navegacion__enlace:nth-child(1),
+    .navegacion__enlace:nth-child(2) {
+        margin-right: 2rem;
+    }
+    .navegacion {
+        display: block;
+    }
+}
+
+.logo {
+    color:var(--color_blanco);
+}
+
+.logo__nombre {
+    font-weight: 400;
+}
+
+.logo__bold {
+    font-weight: bold;
+}
+
+.navegacion a {
+    font-size:1.8rem;
+    color:var(--color_blanco);
+}
+
+
+/* Entrada BLOG*/
+.entrada {
+    border-bottom: 1px solid var(--color_gris);
+    margin-bottom: 2rem;
+}
+.entrada:last-of-type {
+    border:none;
+}
+.entrada__contenido {
+    margin-bottom: 2rem;
+}
+
+@media screen and (min-width:768px) {
+    .contenido_principal {
+        display: grid;
+        grid-template-columns: 2fr 1fr;
+        gap: 4rem;
+    }
+}
+
+.boton--primario {
+    background-color: var(--color_negro);
+}
+/* footer */
+
+.footer {
+    background-color: var(--color_negro);
+    padding-bottom: 3rem;
+}
+
+/* aside */
+.boton--secundario {
+    background-color: var(--color_primario);
+    margin-bottom: 2rem;
+}
+
+.elementos_info span {
+    font-weight: 400;
+}
+.elementos_info  {
+    font-weight: bold;
+    font-size: 1.8rem;
+}
+
+.elemento_1 {
+    border-bottom: 2px solid var(--color_gris);
+
+}
+
+.elemento_titulo {
+    line-height: 1.2;
+    padding: 0;
+    margin: 1rem 0;
+}
+
+/* Nosotros */
+
+@media screen and (min-width:768px) {
+    .contenedor_{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        column-gap:2rem;
+
+    }
+}
+
+.blog h3 {
+    text-align: center;
+}
+
+/* Cursos */
+
+.contenedor__elemento {
+    padding: 3rem 0;
+    border-bottom: 1px solid var(--color_gris);
+}
+@media screen and (min-width:768px) {
+    .contenedor__elemento {
+        display: grid;
+        grid-template-columns: 1fr 2fr;
+        gap:2rem;
+    }
+}
+
+/* Entrada */
+
+.img__nosotros {
+    width: 100%;
+}
+
+/* Contacto */
+
+.contenedor__bg {
+    background-image: url(../img/contacto.jpg);
+    height: 40rem;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.formulario {
+    background-color: var(--color_blanco);
+    width: 95%;
+    margin:-5rem auto 0 auto;
+    padding:5rem;
+}
+.campo {
+    display: flex;
+    margin-bottom: 2rem;
+}
+.campo__label {
+    flex: 0 0 9rem;
+}
+
+.campo__field {
+    flex:1;
+    border:1px solid var(--color_gris)
+}
+
+.campo__field--textarea{
+    height: 20rem;
+}
+
+
+
+
